@@ -18,10 +18,9 @@ jobs:
       run:
         shell: bash
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Terraform Apply
-        run: |
-          terraform init
-          terraform apply -auto-approve
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Terraform Apply
+      run: |
+        terraform init
+        terraform apply -auto-approve
